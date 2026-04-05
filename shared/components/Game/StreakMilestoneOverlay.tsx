@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { Star, Flame } from 'lucide-react';
 import { useHasFinePointer } from '@/shared/hooks/generic/useHasFinePointer';
+import { useClick } from '@/shared/hooks/generic/useAudio';
 import { cn } from '@/shared/lib/utils';
 import { getRandomMilestoneMessage } from '@/shared/lib/game/streakMilestones';
 
@@ -63,6 +64,7 @@ export default function StreakMilestoneOverlay({
   onDismiss,
 }: StreakMilestoneOverlayProps) {
   const hasFinePointer = useHasFinePointer();
+  const { playClick } = useClick();
   const message = useMemo(() => {
     if (!milestone) return '';
 
@@ -80,6 +82,7 @@ export default function StreakMilestoneOverlay({
 
     const handleKeyDown = (event: KeyboardEvent) => {
       absorbKeyboardEvent(event);
+      playClick();
       onDismiss();
     };
 
@@ -101,6 +104,11 @@ export default function StreakMilestoneOverlay({
       window.removeEventListener('keypress', handleKeyPress, true);
     };
   }, [milestone, onDismiss]);
+
+  const handleDismiss = () => {
+    playClick();
+    onDismiss();
+  };
 
   useEffect(() => {
     if (!milestone) return;
@@ -136,7 +144,7 @@ export default function StreakMilestoneOverlay({
           animate='visible'
           exit='exit'
           className='fixed inset-0 z-[70] flex h-full w-full items-center justify-center bg-(--background-color)'
-          onClick={onDismiss}
+          onClick={handleDismiss}
           role='dialog'
           aria-modal='true'
           aria-label={`${milestone} in a row`}
