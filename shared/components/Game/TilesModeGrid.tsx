@@ -9,7 +9,7 @@ import {
   BlankTile,
   tileContainerVariants,
   tileEntryVariants,
-} from '@/shared/components/Game/tilesModeShared';
+} from '@/shared/components/Game/TilesModeShared';
 import {
   celebrationBounceVariants,
   celebrationContainerVariants,
