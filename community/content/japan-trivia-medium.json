@@ -547,16 +547,16 @@
     "Tabi"
   ],
   "correctIndex": 0
-}, 
+},
 {
-  "question": "Which Japanese festival features floating lanterns on water?",
+  "question": "Which Japanese island is the southernmost of the four main islands?",
   "difficulty": "medium",
   "answers": [
-    "Toro Nagashi",
-    "Setsubun",
-    "Tanabata",
-    "Aoi Matsuri"
+    "Honshu",
+    "Hokkaido",
+    "Shikoku",
+    "Kyushu"
   ],
-  "correctIndex": 0
-} 
+  "correctIndex": 3
+}
 ]
