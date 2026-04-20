@@ -426,9 +426,9 @@
     "secondaryColor": "oklch(55.0% 0.100 120.0 / 1)"
   },
   {
-  "id": "crane-flight",
-  "backgroundColor": "oklch(94.0% 0.015 240.0 / 1)",
-  "mainColor": "oklch(40.0% 0.025 270.0 / 1)",
-  "secondaryColor": "oklch(60.0% 0.175 20.0 / 1)"
-} 
+    "id": "wind-god",
+    "backgroundColor": "oklch(19.0% 0.045 175.0 / 1)",
+    "mainColor": "oklch(82.0% 0.155 180.0 / 1)",
+    "secondaryColor": "oklch(72.0% 0.135 165.0 / 1)"
+  }
 ]
